@@ -12,11 +12,10 @@ namespace ConsoleApp1
         static async Task Main(string[] args)
         {
 
-            if (args.Length != 1)
+            if (args.Length != 1 )
             {
                 Console.WriteLine("No url given as argument!");
-
-
+                throw new ArgumentNullException("No arguments!");
             }
             else
             {
@@ -51,6 +50,7 @@ namespace ConsoleApp1
                 {
                     Console.WriteLine(item);
                 }
+                Console.ReadLine();
             }
 
 
